@@ -1,2 +1,19 @@
-# slack-webhook-utils
-Helper utilities for doing slack webhooks. And can be used to create slackbots.
+# Slack Webhooks Utilities
+## About
+These are utilities to create your own slack bot.
+
+## TODO
+* Create utlity for processing incoming webhooks
+* Make an NPM package
+* Create an example bot
+* Write unit tests
+
+## Usage
+### How to use the outgoing bot
+This will eventually change
+
+```code
+o = require "./lib/outgoing.coffee"
+o.outgoing {channel: "#random", botusername: "blah", msgtext: "This is a message", url: "https://slack.webhook.url"}, (cb) -> 
+    console.log(cb)
+```
