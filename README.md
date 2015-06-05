@@ -9,7 +9,7 @@ These are utilities to create your own slack bot.
 * Write unit tests
 
 ## Usage
-### How to use the outgoing bot
+### How to use the incoming webhooks API
 This will eventually change
 
 ```code
