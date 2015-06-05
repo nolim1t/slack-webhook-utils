@@ -3,8 +3,8 @@ request = require 'request'
 module.exports = {
 	outgoing: (info, cb) ->
 		o = {
-				meta: {status: 400, msg: 'Invalid Parameters. Required Parameters are channel, botusername, msgtext, url and optionally emoji, iconurl, dryrun and debug'}
-			}
+			meta: {status: 400, msg: 'Invalid Parameters. Required Parameters are channel, botusername, msgtext, url and optionally emoji, iconurl, dryrun and debug'}
+		}
 		if (info.channel != undefined && info.botusername != undefined && info.msgtext != undefined && info.url != undefined) 
 			payload = {
 				"channel": info.channel,
