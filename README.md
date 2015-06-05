@@ -13,7 +13,7 @@ These are utilities to create your own slack bot.
 This will eventually change
 
 ```code
-o = require "./lib/outgoing.coffee"
-o.outgoing {channel: "#random", botusername: "blah", msgtext: "This is a message", url: "https://slack.webhook.url"}, (cb) -> 
+o = require "./lib/incoming.coffee"
+o {channel: "#random", botusername: "blah", msgtext: "This is a message", url: "https://slack.webhook.url"}, (cb) -> 
     console.log(cb)
 ```
