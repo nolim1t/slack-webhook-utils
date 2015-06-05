@@ -2,7 +2,7 @@ request = require 'request'
 
 module.exports = (info, cb) ->
 	o = {
-		meta: {status: 400, msg: 'Invalid Parameters. Required Parameters are channel, botusername, msgtext, url and optionally emoji, iconurl, dryrun and debug'}
+		meta: {status: 400, msg: 'Invalid Parameters. Required Parameters are channel, botusername, msgtext, url and optionally attachments, emoji, iconurl, dryrun and debug'}
 	}
 	if (info.channel != undefined && info.botusername != undefined && info.msgtext != undefined && info.url != undefined) 
 		payload = {
@@ -17,6 +17,9 @@ module.exports = (info, cb) ->
 				payload.icon_emoji = ':ghost:'
 			else
 				payload.icon_url = info.iconurl
+
+		if (info.attachments != undefined)
+			payload.attachments = info.attachments
 
 		o.meta.status = 200
 		o.meta.msg = 'OK'
