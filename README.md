@@ -26,7 +26,7 @@ Here are some examples of implementing slash commannds in your app
 router.post '/slack', require('./lib/slashcmd.coffee')
 ```
 
-which also requires the following middleware to be loaded
+Which also requires the following middleware to be loaded. See examples folder for what sort of middleware needs to be included.
 ```coffeescript
 	# Middleware to load slack function
 	router.use (req, res, next) ->
