@@ -9,7 +9,7 @@ module.exports = (info, cb) ->
 		if ext_token == info.token 
 			if authorized_channel == info.channel_name
 				if authorized_users != undefined
-					for authorized_user in authorized_users
+					for authorized_user in authorized_users.split(',')
 						if info.user_name == authorized_user
 							is_authorized = 'yes'
 				else
