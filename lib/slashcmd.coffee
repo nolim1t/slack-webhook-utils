@@ -1,5 +1,5 @@
 # Compatible with Express v4.X
-module.exports = (req, res) ->
+module.exports = (req, res, next) ->
 	payload = {meta: {code: 400, msg: 'Invalid Parameters'}}
 	# https://api.slack.com/slash-commands
 	if req.body != undefined 
@@ -19,7 +19,7 @@ module.exports = (req, res) ->
 					command: req.body.command,
 					text: req.body.text
 				}
-				req.slackfunction (info, cb) ->
+				req.slackfunction info, (cb) ->
 					payload.meta.code = cb.meta.code
 					payload.meta.msg = cb.meta.msg
 					res.status(payload.meta.code).send(JSON.stringify(payload))
